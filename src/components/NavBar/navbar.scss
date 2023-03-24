@@ -1,0 +1,45 @@
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: fit-content;
+    border: 1px solid gainsboro;
+    border-radius: 5px;
+
+    .logo{
+        margin: 0;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        padding-left: 10px;
+        img{
+            width: 100px;
+            cursor: pointer;
+        }
+    }
+
+    .navLink{
+        display: flex;
+        gap: 40px;
+        list-style: none;
+        -webkit-box-shadow:2px 4px 10px 1px rgba(0,0,0,0.47);
+    box-shadow: 2px 4px 10px 1px rgba(201,201,201,0.47);
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    }
+    .hamburger{
+        display: none;
+    }
+    .user{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 5px 4px;
+        -webkit-box-shadow:2px 4px 7px 1px rgba(0,0,0,0.47);
+    box-shadow: 2px 4px 10px 1px rgba(201,201,201,0.47);
+    padding: 10px 15px;
+    border-radius: 5px;
+
+    }
+}

@@ -1,0 +1,14 @@
+.ul{
+    display: flex;
+    gap: 4px;
+    flex-direction: column-reverse;
+    align-items: center;
+
+    li{
+        font-size: 7px;
+    }
+    img{
+        width: 25px;
+        cursor: pointer;
+    }
+}

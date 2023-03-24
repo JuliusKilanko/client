@@ -1,0 +1,21 @@
+.availableRooms{
+    display: flex;
+    width: 100%;
+    gap: 28px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 80px;
+    flex-wrap: wrap;
+}
+
+@media (max-width : 428px) {
+    .availableRooms{
+    display: flex;
+    width: 100%;
+    gap: 18px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 80px;
+    flex-wrap: wrap;
+    }
+}
