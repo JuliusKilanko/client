@@ -1,7 +1,7 @@
 import React from 'react'
 import './brand.scss'
 import House from '../../../assets/houseboat.jpg'
-import Slider from 'infinite-react-carousel';
+import Carousel from 'nuka-carousel';
 import BrandList from './BrandList'
 import {IoMdSwitch} from 'react-icons/io'
 import Dummusi from '../../../assets/dammusi.jpg'
@@ -87,9 +87,9 @@ function MobileBrand() {
   return (
     <div className='Mobilebrand'>
     <div className='slideItems'>
-        <Slider slidesToShow={5} autoplaySpeed={3000} autoplay={true} arrows={false} className="">
+        <Carousel wrapAround={false} slidesToShow={5} autoplay={true} autoplayInterval={3000} withoutControls={true} speed={3000}>
             {brandList}
-        </Slider>
+        </Carousel>
     </div>
     <div className='filter'>
                 <IoMdSwitch />
