@@ -87,7 +87,7 @@ function Brand() {
   return (
     <div className='brand'>
     <div className='slideItems'>
-        <Carousel wrapAround={false} slidesToShow={9} autoplay={true} autoplayInterval={3000} withoutControls={true}>
+        <Carousel wrapAround={false} slidesToShow={9} autoplay={true} autoplayInterval={3000} withoutControls={true} speed={3000}>
             {brandList}
         </Carousel>
     </div>
