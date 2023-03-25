@@ -22,7 +22,25 @@
             display: none;
         }
         .hamburger{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .item{
             display: block;
+            position: relative;
+            span{
+                position: absolute;
+                padding:8px 8px;
+                font-weight: 700;
+                border-radius: 50%;
+                top: -5px;
+                right: -15px;
+                display : flex;
+                justify-content: center;
+                align-items: center;
+                background-color: goldenrod;
+            }
         }
         .user{
             display: none;

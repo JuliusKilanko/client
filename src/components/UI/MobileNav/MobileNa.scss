@@ -17,14 +17,8 @@
             font-size: 12px;
         }
     }
-
     li{
-
-        &:hover{
-            background-color: rgba(255, 255, 255, 0.322);
-            color: black;
-            border-radius: 5px;
-        }
+        font-weight: 600;
     }
 }
 .user{
@@ -33,7 +27,8 @@
     padding: 5px 10px;
     border-radius: 5px;
     align-items: center;
-    background-color: white;
+    background-color: transparent;
+    border: 1px solid black;
     font-size: 20px;
     color: black;
 }

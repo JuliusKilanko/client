@@ -4,9 +4,14 @@ import './Form.scss'
 import {IoIosCloseCircleOutline} from 'react-icons/io'
 
 function Forms(props) {
+  function handleBookRoom(event){
+    event.preventDefault()
+
+  }
+
   return (
     <Model onClose={props.onClose}>
-      <form className='bookingForm'>
+      <form className='bookingForm' onSubmit={handleBookRoom}>
       <div className='close'><IoIosCloseCircleOutline onClick={props.onClose}/></div>
       <h1>Book an Apartment</h1>
         <div>
