@@ -6,6 +6,7 @@ import MobileBrand from '../../components/UI/BrandMobile/MobileBrand'
 import Rooms from '../../components/Rooms/Rooms'
 import Forms from '../../components/Sidebar/Forms/Forms'
 import MobileNav from '../../components/UI/MobileNav/MobileNav'
+import Footer from '../../components/Footer/Footer'
 
 function Home() {
   const [bookNow, setBookNow] =useState(false)
@@ -39,6 +40,9 @@ function Home() {
        </div>
        <div>
         <Rooms onBook={handleBooking}/>
+       </div>
+       <div>
+        <Footer />
        </div>
     </div>
   )
