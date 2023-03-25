@@ -1,0 +1,41 @@
+.Card{
+    display: flex;
+    align-items: start;
+    border-radius: 8px;
+    height: 90px;
+    background-color: rgba(255, 255, 255, 0.521);
+    justify-content: space-between;
+    padding-right: 20px;
+    -webkit-box-shadow:2px 4px 10px 1px rgba(0,0,0,0.47);
+    box-shadow: 2px 4px 10px 1px rgba(201,201,201,0.47);
+    border: 1px solid gainsboro;
+
+    img{
+        width: 120px;
+        height: 100%;
+        border-radius: 8px;
+    }
+    .topDiv{
+        padding: 8px;
+
+        h2{
+            font-size: 20px;
+        }
+        
+        .button{
+            width: 110%;
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            color: white;
+            font-weight: bold;
+
+            button{
+                background-color: goldenrod;
+                border: 0;
+                color: white;
+                width: 60px;
+            }
+        }
+    }
+}

@@ -22,7 +22,7 @@ function Navbar(props) {
         <li className='guess'>Add Guest <MdOutlineLocationSearching className='icon'/></li>
       </ul>
       <div className='item'>
-      <RiShoppingBasketLine  size={40}/>
+      <RiShoppingBasketLine  size={40} onClick={props.openCart}/>
       <span>{items}</span>
       </div>
       <div className='hamburger'>
