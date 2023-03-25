@@ -5,7 +5,7 @@ function BrandList(props) {
   return (
       <ul className='ul'>
     <li>{props.text}</li>
-    <img src={props.icon} alt=""/>
+    <img src={props.icon} alt="" className='img'/>
     </ul>
   )
 }

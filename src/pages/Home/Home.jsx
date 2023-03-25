@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Navbar from '../../components/NavBar/Navbar'
-// import Brand from '../../components/UI/Brand/Brand'
+import Brand from '../../components/UI/Brand/Brand'
 import './home.scss'
 // import MobileBrand from '../../components/UI/BrandMobile/MobileBrand'
 import Rooms from '../../components/Rooms/Rooms'
@@ -30,9 +30,10 @@ function Home() {
        <div className='homeContainer'>
         <Navbar OpenNav={handleMobileNav}/>
        </div>
-       {/* <div className='desktop'>
+       <div className='desktop'>
        <Brand />
        </div>
+       {/* 
        <div className='mobile'>
         <MobileBrand />
        </div> */}
