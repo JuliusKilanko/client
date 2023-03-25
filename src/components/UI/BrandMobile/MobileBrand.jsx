@@ -91,10 +91,6 @@ function MobileBrand() {
             {brandList}
         </Carousel>
     </div>
-    <div className='filter'>
-                <IoMdSwitch />
-                <p>Filter</p>
-    </div>
     </div>
   )
 }
