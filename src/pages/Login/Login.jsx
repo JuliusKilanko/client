@@ -1,7 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './login.scss'
 
 function Login(props) {
+    const [userName, setUsername] = useState('')
+    const [password, setpassword] = useState('')
+    const [isValid, setIsValid] = useState(false)
+    function handleUserName(e){
+        setUsername(e.target.value)
+    }
+    function handlePassword(e){
+        setpassword(e.target.value)
+    }
+    if(userName.trim().length >= 3 && password.trim().length >= 5){
+       
+    }
 
   return (
         <form className='forms' onSubmit={props.onClick}>
@@ -10,13 +22,13 @@ function Login(props) {
             </div>
         <div className='username'>
             <label>Username</label>
-            <input type="text" />
+            <input type="text" onChange={handleUserName}/>
         </div>
         <div>
             <label>Password</label>
-            <input type="password" />
+            <input type="password" onChange={handlePassword}/>
         </div>
-        <button >Login</button>
+        <button className={`btn`} disabled={!isValid}>Login</button>
     </form>
   )
 }

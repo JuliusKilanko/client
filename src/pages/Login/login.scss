@@ -8,7 +8,7 @@
     background-color: goldenrod;
     gap: 20px;
 
-    button{
+    .btn{
         width: 80%;
         padding: 15px 0px;
         background-color: black;
@@ -17,6 +17,17 @@
         border-radius: 4px;
         font-weight: 600;
         font-size: 16px;
+    }
+    .btn:disabled {
+        width: 80%;
+        padding: 15px 0px;
+        background-color: #ccc;
+        color: black;
+        border: 0px;
+        border-radius: 4px;
+        font-weight: 600;
+        font-size: 16px;
+        cursor: not-allowed;
     }
     .text{
         margin-top: -40px;
