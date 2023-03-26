@@ -3,7 +3,7 @@ import './brand.scss'
 import House from '../../../assets/houseboat.jpg'
 import Carousel from 'nuka-carousel';
 import BrandList from './BrandList'
-import {IoMdSwitch} from 'react-icons/io'
+// import {IoMdSwitch} from 'react-icons/io'
 import Dummusi from '../../../assets/dammusi.jpg'
 import Caves from '../../../assets/cass.jpg'
 import Trending from '../../../assets/trending.jpg'
