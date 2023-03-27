@@ -44,7 +44,10 @@ function Login(props) {
 
     function submitHandler(event){
         event.preventDefault()
-        ctx.userName = userInputRef.current.value
+        ctx.userName = userInputRef.current.value;
+        setUsername('')
+        setpassword('')
+        setFormIsValid(false)
     }
 
 
