@@ -5,17 +5,14 @@ import CartProvider from "./store/CartProvider";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false)
-  const [notLoddedIn, setNotLoggedIn] = useState(true)
 
-  function handleLoggedIn(e){
-    e.preventDefault()
+  function LoggedInHandler(){
     setIsLoggedIn(true)
-    setNotLoggedIn(false)
   }
   return(
       <CartProvider >
+      {!isLoggedIn && <Login onLogin={LoggedInHandler} />}
       {isLoggedIn && <Home />}
-      {notLoddedIn && <Login onClick={handleLoggedIn}/>}
       </CartProvider>
   )
 }
