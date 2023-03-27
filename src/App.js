@@ -9,10 +9,13 @@ function App() {
   function LoggedInHandler(){
     setIsLoggedIn(true)
   }
+  function LoggedOutHandler(){
+    setIsLoggedIn(false)
+  }
   return(
       <CartProvider >
       {!isLoggedIn && <Login onLogin={LoggedInHandler} />}
-      {isLoggedIn && <Home />}
+      {isLoggedIn && <Home onLoggedOut={LoggedOutHandler}/>}
       </CartProvider>
   )
 }
