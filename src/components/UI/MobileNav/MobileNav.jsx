@@ -13,13 +13,16 @@ function MobileNav(props) {
 
   const Time = new Date().getHours()
 
-  if(Time >= 6 || Time <= 12){
+  if(Time >= 6){
       contents = 'Good Morning 🌄'
-  } else if(Time >= 12 || Time <= 16){
+  } 
+  if(Time >= 12 ){
     contents = 'Good Afternon 🕑'
-  }else if(Time >= 16 || Time <= 18){
+  }
+  if(Time >= 16 ){
     contents = 'Good Evening 🌆'
-  }else if(Time >= 18 || Time <=23){
+  }
+  if(Time >= 18 ){
     contents ='Good Night 🌃'
   }
   return (
