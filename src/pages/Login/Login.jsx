@@ -1,5 +1,7 @@
-import React, { useState } from 'react'
+import React, { useContext, useRef, useState } from 'react'
 import './login.scss'
+import cartContext from '../../store/cart-contenxts';
+import Input from '../../components/UI/Input/Input';
 
 function Login(props) {
     const [userName, setUsername] = useState('')
@@ -7,6 +9,8 @@ function Login(props) {
     const [password, setpassword] = useState('')
     const [passwordIsValid, setPasswordIsValid] = useState()
     const [formisValid, setFormIsValid] = useState(false)
+
+  
 
 
     function handleUser(e){
@@ -35,32 +39,45 @@ function Login(props) {
         setPasswordIsValid(password.trim().length > 6);
     }
 
+    const ctx = useContext(cartContext)
+    const userInputRef = useRef();
+
     function submitHandler(event){
-        event.preventDefault();
-        props.onLogin(userName, password)
+        event.preventDefault()
+        ctx.userName = userInputRef.current.value
     }
 
 
-  return (
-        <form className='forms' onSubmit={submitHandler}>
+  return <form className='forms' onSubmit={submitHandler}>
             <div className='text'>
                 <h3>Login to your account</h3>
             </div>
         <div className='username'>
-            <label>Username</label>
-            <input type="text" 
-            onChange={handleUser}
-            value={userName}/>
+            <Input 
+            ref={userInputRef}
+            onChange ={handleUser}
+            value ={userName}
+            input={{
+                id : 'username',
+                type : 'text',
+                maxlength : '7',
+                
+            }}
+            />
         </div>
         <div>
-            <label>Password</label>
-            <input type="password" 
-            onChange={passwordHandler}
-            value={password}/>
+            <Input 
+            onChange ={passwordHandler}
+            value ={password}
+            input={{
+                id:'password',
+                type : 'password',
+                maxlength : '9',
+            }}
+            />
         </div>
-        <button className={`btn`} disabled={!formisValid}>Login</button>
+        <button className='btn' onClick={props.onLogin} disabled={!formisValid}>Login</button>
     </form>
-  )
 }
 
 export default Login

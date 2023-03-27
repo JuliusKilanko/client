@@ -39,8 +39,7 @@ function Home(props) {
       {cart && <Card onClose={handleCloseCart}/>}
     {mobileNav && <MobileNav onClose={handleMobileClose} onLoggedOut={props.onLoggedOut}/>}
     {bookNow && <Forms onClose ={handleCloseBooking}/>}
-       <div className='homeContainer'>
-        <Navbar OpenNav={handleMobileNav} openCart={handleCart}/>
+       <div className='homeContainer'>        <Navbar OpenNav={handleMobileNav} openCart={handleCart}/>
        </div>
        <div className='desktop'>
        <Brand />

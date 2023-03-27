@@ -2,19 +2,23 @@ import Home from "./pages/Home/Home";
 import React, { useState } from "react";
 import Login from "./pages/Login/Login";
 import CartProvider from "./store/CartProvider";
+import './App.scss'
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false)
 
   function LoggedInHandler(){
     setIsLoggedIn(true)
+    alert('working')
   }
   function LoggedOutHandler(){
     setIsLoggedIn(false)
   }
   return(
       <CartProvider >
-      {!isLoggedIn && <Login onLogin={LoggedInHandler} />}
+      <div className={isLoggedIn ? 'hide' : 'show'}>
+<Login onLogin={LoggedInHandler} />
+      </div>
       {isLoggedIn && <Home onLoggedOut={LoggedOutHandler}/>}
       </CartProvider>
   )

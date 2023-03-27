@@ -1,0 +1,20 @@
+.reuseableInput{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 5px;
+        margin: 0 auto;
+    label{
+        font-size: 20px;
+        font-weight: 600;
+        color: white;
+    }
+    input{
+        padding: 12px 2px;
+        background-color: transparent;
+        border: 1px solid ghostwhite;
+        outline: none;
+        text-indent: 10px;
+        border-radius: 4px;
+    }
+}
