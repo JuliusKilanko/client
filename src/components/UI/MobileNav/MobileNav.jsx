@@ -14,13 +14,13 @@ function MobileNav(props) {
   const Time = new Date().getHours()
 
   if(Time >= 6 || Time <= 12){
-      contents = 'Good Morning'
+      contents = 'Good Morning 🌄'
   } else if(Time >= 12 || Time <= 16){
-    contents = 'Good Afternon'
+    contents = 'Good Afternon 🕑'
   }else if(Time >= 16 || Time <= 18){
-    contents = 'Good Evening'
+    contents = 'Good Evening 🌆'
   }else if(Time >= 18 || Time <=23){
-    contents ='Good Night'
+    contents ='Good Night 🌃'
   }
   return (
     <MobileNavModel onClose={props.onClose}>
