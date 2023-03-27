@@ -77,6 +77,10 @@ function Login(props) {
             />
         </div>
         <button className='btn' onClick={props.onLogin} disabled={!formisValid}>Login</button>
+        <div className='createAccount'>
+            <p>Don't have an Account Yet?</p>
+            <span>Sign Up</span>
+        </div>
     </form>
 }
 

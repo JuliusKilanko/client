@@ -9,7 +9,6 @@ function App() {
 
   function LoggedInHandler(){
     setIsLoggedIn(true)
-    alert('working')
   }
   function LoggedOutHandler(){
     setIsLoggedIn(false)

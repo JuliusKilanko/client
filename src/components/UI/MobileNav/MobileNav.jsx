@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import MobileNavModel from './MobileNavModel'
 import './MobileNa.scss'
 import {BsFillHouseDoorFill} from 'react-icons/bs'
@@ -8,13 +8,27 @@ import cartContext from '../../../store/cart-contenxts'
 
 function MobileNav(props) {
   const ctx = useContext(cartContext)
+
+  let contents = <p>Greetings</p>
+
+  const Time = new Date().getHours()
+
+  if(Time >= 6 || Time <= 12){
+      contents = 'Good Morning'
+  } else if(Time >= 12 || Time <= 16){
+    contents = 'Good Afternon'
+  }else if(Time >= 16 || Time <= 18){
+    contents = 'Good Evening'
+  }else if(Time >= 18 || Time <=23){
+    contents ='Good Night'
+  }
   return (
     <MobileNavModel onClose={props.onClose}>
       <div className='generalMobileNav'>
       <ul className='mobileNavLink'>
       <div className='userName'>
         <h1>Hey {ctx.userName}</h1>
-        <span>Welcome Back</span>
+        <span>{contents}</span>
       </div>
         <li>AnyWhere</li>
         <li>AnyWeek</li>

@@ -8,6 +8,26 @@
     background-color: goldenrod;
     gap: 20px;
 
+    .createAccount{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+
+        p{
+            font-size: 13px;
+            width: fit-content;
+            font-weight:bold;
+        }
+        span{
+            text-decoration: underline;
+            font-size: 13px;
+            cursor: pointer;
+            width: fit-content;
+            font-weight:bold;
+        }
+    }
+
     .btn{
         width: 92%;
         padding: 15px 0px;
@@ -18,8 +38,9 @@
         font-weight: 600;
         font-size: 16px;
     }
+    
     .btn:disabled {
-        width: 80%;
+        width: 92%;
         padding: 15px 0px;
         background-color: #ccc;
         color: black;
