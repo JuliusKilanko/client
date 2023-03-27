@@ -20,7 +20,7 @@ function MobileNav(props) {
         <li>bnb your House</li>
         <li>Experience</li>
         <li>Help</li>
-        <li>Login</li>
+        <li onClick={props.onLoggedOut}>Logout</li>
       </ul>
       <ul className='user'>
         <li><BsFillHouseDoorFill /></li>

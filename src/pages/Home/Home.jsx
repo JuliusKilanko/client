@@ -9,7 +9,7 @@ import MobileNav from '../../components/UI/MobileNav/MobileNav'
 import Footer from '../../components/Footer/Footer'
 import Card from '../../components/Cards/Card'
 
-function Home() {
+function Home(props) {
   const [bookNow, setBookNow] =useState(false)
   const [mobileNav, setMobileNav] = useState(false)
   const [cart, setCart] = useState(false)
@@ -37,7 +37,7 @@ function Home() {
   return (
     <div>
       {cart && <Card onClose={handleCloseCart}/>}
-    {mobileNav && <MobileNav onClose={handleMobileClose}/>}
+    {mobileNav && <MobileNav onClose={handleMobileClose} onLoggedOut={props.onLoggedOut}/>}
     {bookNow && <Forms onClose ={handleCloseBooking}/>}
        <div className='homeContainer'>
         <Navbar OpenNav={handleMobileNav} openCart={handleCart}/>
