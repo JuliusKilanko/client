@@ -13,7 +13,7 @@ function Login(props) {
         setUsername(e.target.value)
 
         setFormIsValid(
-            e.target.value.trim().length <= 6 &&
+            e.target.value.trim().length <= 7 &&
         password.trim().length > 6
         );
     };
@@ -23,7 +23,7 @@ function Login(props) {
 
         setFormIsValid(
             event.target.value.trim().length > 6 && 
-            userName.trim().length <= 6
+            userName.trim().length <= 7
         );
     };
 
